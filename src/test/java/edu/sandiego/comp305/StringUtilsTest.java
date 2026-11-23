@@ -11,4 +11,13 @@ class StringUtilsTest {
         assertEquals("cba", StringUtils.reverseString("abc"));
     }
 
+    @Test
+    void reversesEmptyString() {
+        assertEquals("", StringUtils.reverseString(""));
+    }
+
+    @Test
+    void singleCharacterIsUnchanged() {
+        assertEquals("a", StringUtils.reverseString("a"));
+    }
 }
