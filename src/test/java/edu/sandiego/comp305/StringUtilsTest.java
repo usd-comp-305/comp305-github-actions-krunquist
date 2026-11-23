@@ -20,4 +20,15 @@ class StringUtilsTest {
     void singleCharacterIsUnchanged() {
         assertEquals("a", StringUtils.reverseString("a"));
     }
+
+    @Test
+    void palindromeStaysTheSame() {
+        assertEquals("racecar", StringUtils.reverseString("racecar"));
+    }
+
+    @Test
+    void reversesSpacesAndPunctuation() {
+        assertEquals("!dlrow ,olleH",
+                StringUtils.reverseString("Hello, world!"));
+    }
 }
