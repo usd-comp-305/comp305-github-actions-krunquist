@@ -7,6 +7,9 @@ public final class StringUtils {
     }
 
     public static String reverseString(final String input) {
+        if (input == null) {
+            return null;
+        }
         return new StringBuilder(input).reverse().toString();
     }
 }

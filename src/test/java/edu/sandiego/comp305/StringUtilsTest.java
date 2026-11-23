@@ -8,27 +8,36 @@ class StringUtilsTest {
 
     @Test
     void reversesSimpleWord() {
-        assertEquals("cba", StringUtils.reverseString("abc"));
+        assertEquals("cba",
+                StringUtils.reverseString("abc"));
     }
 
     @Test
     void reversesEmptyString() {
-        assertEquals("", StringUtils.reverseString(""));
+        assertEquals("",
+                StringUtils.reverseString(""));
     }
 
     @Test
     void singleCharacterIsUnchanged() {
-        assertEquals("a", StringUtils.reverseString("a"));
+        assertEquals("a",
+                StringUtils.reverseString("a"));
     }
 
     @Test
     void palindromeStaysTheSame() {
-        assertEquals("racecar", StringUtils.reverseString("racecar"));
+        assertEquals("racecar",
+                StringUtils.reverseString("racecar"));
     }
 
     @Test
     void reversesSpacesAndPunctuation() {
         assertEquals("!dlrow ,olleH",
                 StringUtils.reverseString("Hello, world!"));
+    }
+
+    @Test
+    void nullInputReturnsNull() {
+        assertNull(StringUtils.reverseString(null));
     }
 }
